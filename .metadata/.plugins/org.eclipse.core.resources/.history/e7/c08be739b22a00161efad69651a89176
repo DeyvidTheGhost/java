@@ -1,0 +1,13 @@
+package com.david.utilitario.test;
+
+import org.junit.Test;
+import com.david.utilitario.*;
+import static org.junit.Assert.*;
+
+public class StringUtilTest {
+	@Test
+	public void capitalizeTest(){
+		assertEquals(StrinUtil.capitalize("java"),"Java");
+	}
+
+}
