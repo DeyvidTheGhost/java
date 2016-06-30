@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="StringUtilBorrar" project="utilitario" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="com.david.utilitario.borrar.StringUtilBorrar" time="0.001">
-    <testcase name="swapCase" classname="com.david.utilitario.borrar.StringUtilBorrar" time="0.0"/>
-    <testcase name="times" classname="com.david.utilitario.borrar.StringUtilBorrar" time="0.0"/>
-    <testcase name="reverse" classname="com.david.utilitario.borrar.StringUtilBorrar" time="0.0"/>
-    <testcase name="capitalizeTest" classname="com.david.utilitario.borrar.StringUtilBorrar" time="0.001"/>
-    <testcase name="truncate" classname="com.david.utilitario.borrar.StringUtilBorrar" time="0.0"/>
-  </testsuite>
-</testrun>

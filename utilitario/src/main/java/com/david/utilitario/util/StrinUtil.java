@@ -1,5 +1,7 @@
 package com.david.utilitario.util;
 
+import java.nio.channels.CancelledKeyException;
+
 /**
  * clase con metodos complementarios para la clase string
  * 
@@ -153,7 +155,7 @@ public class StrinUtil {
 
 	public static String swapCase(String cadenaTexto) {
 		String z = "";
-		if (cadenaTexto == null) {
+		if (cadenaTexto == null) {//javac **.java
 			return cadenaTexto;
 		} else {
 			for (int i = 0; i < cadenaTexto.length(); i++) {
@@ -175,12 +177,44 @@ public class StrinUtil {
 		return z;
 
 	}
+	
+	
 
-//	 public static void main(String[] args) {
-//	 System.out.println(swapCase("java"));
-//	 System.out.println(swapCase("JAVA"));
-//	 System.out.println("jAVa");
-//	 System.out.println("");
-//	 }
+	// public static void main(String[] args) {
+	// System.out.println(swapCase("java"));
+	// System.out.println(swapCase("JAVA"));
+	// System.out.println("jAVa");
+	// System.out.println("");
+	// }
+
+	public static String fullTrim(String cadenaTexto) {
+		boolean esEspacio = true;
+		String resultado = "";
+		String cadenaTrim = cadenaTexto.trim();
+
+		for (int i = 0; i < cadenaTrim.length(); i++) {
+			char letra = cadenaTrim.charAt(i);
+
+			if (!Character.isWhitespace(letra)) {
+				resultado += letra;
+				esEspacio = true;
+			 } else if (Character.isWhitespace(letra) && esEspacio){
+			
+				 resultado += letra;
+				 esEspacio = false;
+			 }
+		}
+
+	return resultado;
+
+	}
+	
+	
+
+	public static void main(String[] args) {
+		System.out.println(fullTrim("    david   bombom  "));
+		System.out.println(fullTrim(" david    reyes"));
+		System.out.println(fullTrim("   palacios    reyes    deyvid   cristhian       "));
+	}
 
 }
